@@ -6,7 +6,8 @@
 	"scripts": {
 		"test": "echo 'this is a test'",
 		"dev": "vite",
-		"build": "npm run build"
+		"build": "vite build",
+		"serve": "vite preview --port 8080"
 	},
 	"repository": {
 		"type": "git",
