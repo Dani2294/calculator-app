@@ -4,7 +4,9 @@
 	"description": "![Design preview for the Calculator app coding challenge](./design/desktop-preview.jpg)",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo 'this is a test'"
+		"test": "echo 'this is a test'",
+		"dev": "vite",
+		"build": "npm run build"
 	},
 	"repository": {
 		"type": "git",
@@ -20,6 +22,7 @@
 	"devDependencies": {
 		"autoprefixer": "^10.4.0",
 		"postcss": "^8.3.11",
-		"tailwindcss": "^2.2.19"
+		"tailwindcss": "^2.2.19",
+		"vite": "^2.6.14"
 	}
 }
