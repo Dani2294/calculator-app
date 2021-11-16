@@ -1,26 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Calculator app</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="./style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+		<title>Frontend Mentor | Calculator app</title>
 
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<!-- <style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style> -->
+	</head>
+	<body class="font-spartan bg-var-base p-5 transition-all duration-500">
+		<!-- THE CALCULATOR -->
+		<div class="max-w-max mx-auto">
+			<!-- HEAD -->
+			<div class="flex items-center justify-between py-5">
+				<h1 class="text-var-screen text-4xl">calc</h1>
+				<div class="flex items-end gap-5">
+					<span class="text-var-screen uppercase text-sm tracking-widest"
+						>theme</span
+					>
+					<div id="theme-toggler" class="space-y-1 cursor-pointer">
+						<div class="flex justify-around">
+							<span class="text-var-screen">1</span>
+							<span class="text-var-screen">2</span>
+							<span class="text-var-screen">3</span>
+						</div>
+						<div
+							class="
+								flex
+								items-center
+								bg-var-keypad
+								rounded-full
+								py-2
+								px-2
+								w-20
+								h-7
+							"
+						>
+							<div
+								id="ball-toggler"
+								class="
+									rounded-full
+									bg-var-key-accent-2
+									w-4
+									h-4
+									transform
+									transition-transform
+									duration-700
+								"
+							></div>
+							<!-- translate-x-6 translate-x-12 for the ball -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END OF HEAD -->
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+			<!-- SCREEN -->
+			<div
+				class="
+					bg-var-screen
+					rounded-lg
+					p-6
+					text-var-screen text-3xl text-right
+					space-y-3
+				"
+			>
+				<div id="sup-screen" class="text-sm text-var-sup-screen h-4"></div>
+				<div id="main-screen" class="h-10"></div>
+			</div>
+			<!-- END OF SCREEN -->
+
+			<!-- KEYPAD -->
+			<div
+				class="
+					grid grid-cols-4
+					gap-4
+					justify-items-center
+					rounded-xl
+					bg-var-keypad
+					p-6
+					mt-5
+				"
+			>
+				<!-- ROW -->
+				<div class="btn btn--base number">7</div>
+				<div class="btn btn--base number">8</div>
+				<div class="btn btn--base number">9</div>
+				<div id="delete" class="btn btn--accent-1">del</div>
+				<!-- END OF ROW -->
+				<!-- ROW -->
+				<div class="btn btn--base number">4</div>
+				<div class="btn btn--base number">5</div>
+				<div class="btn btn--base number">6</div>
+				<div class="btn btn--base operator">+</div>
+				<!-- END OF ROW -->
+				<!-- ROW -->
+				<div class="btn btn--base number">1</div>
+				<div class="btn btn--base number">2</div>
+				<div class="btn btn--base number">3</div>
+				<div class="btn btn--base operator">-</div>
+				<!-- END OF ROW -->
+				<!-- ROW -->
+				<div class="btn btn--base number">.</div>
+				<div class="btn btn--base number">0</div>
+				<div class="btn btn--base operator">/</div>
+				<div class="btn btn--base operator">x</div>
+				<!-- END OF ROW -->
+				<!-- ROW -->
+				<div id="reset" class="btn btn--accent-1 col-span-2 w-full">reset</div>
+				<div id="equal" class="btn btn--accent-2 col-span-2 w-full">=</div>
+				<!-- END OF ROW -->
+			</div>
+			<!-- END OF KEYPAD -->
+		</div>
+		<!-- <div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Your Name Here</a>.
+		</div> -->
+		<script src="./js/app.js"></script>
+	</body>
 </html>

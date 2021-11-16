@@ -1,0 +1,89 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--color-bg-base: hsl(222, 26%, 31%);
+		--color-bg-keypad: hsl(223, 31%, 20%);
+		--color-bg-screen: hsl(224, 36%, 15%);
+
+		--color-bg-key-base: hsl(30, 25%, 89%);
+		--color-shadow-key-base: hsl(28, 16%, 65%);
+
+		--color-bg-key-accent-1: hsl(225, 21%, 49%);
+		--color-shadow-key-accent-1: hsl(224, 28%, 35%);
+
+		--color-bg-key-accent-2: hsl(6, 63%, 50%);
+		--color-shadow-key-accent-2: hsl(6, 70%, 34%);
+
+		--color-text-key-base: hsl(221, 14%, 31%);
+		--color-text-key-accent-1: hsl(0, 0%, 100%);
+		--color-text-key-accent-2: hsl(0, 0%, 100%);
+		--color-text-screen: hsl(0, 0%, 100%);
+		--color-text-sup-screen: hsl(225, 21%, 49%);
+	}
+
+	.theme-2 {
+		--color-bg-base: hsl(0, 0%, 90%);
+		--color-bg-keypad: hsl(0, 5%, 81%);
+		--color-bg-screen: hsl(0, 0%, 93%);
+
+		--color-bg-key-base: hsl(45, 7%, 89%);
+		--color-shadow-key-base: hsl(35, 11%, 61%);
+
+		--color-bg-key-accent-1: hsl(185, 42%, 37%);
+		--color-shadow-key-accent-1: hsl(185, 58%, 25%);
+
+		--color-bg-key-accent-2: hsl(25, 98%, 40%);
+		--color-shadow-key-accent-2: hsl(25, 99%, 27%);
+
+		--color-text-key-base: hsl(60, 10%, 19%);
+		--color-text-key-accent-1: hsl(0, 0%, 100%);
+		--color-text-key-accent-2: hsl(0, 0%, 100%);
+		--color-text-screen: hsl(60, 10%, 19%);
+		--color-text-sup-screen: hsl(185, 42%, 37%);
+	}
+
+	.theme-3 {
+		--color-bg-base: hsl(268, 75%, 9%);
+		--color-bg-keypad: hsl(268, 71%, 12%);
+		--color-bg-screen: hsl(268, 71%, 12%);
+
+		--color-bg-key-base: hsl(268, 47%, 21%);
+		--color-shadow-key-base: hsl(290, 70%, 36%);
+
+		--color-bg-key-accent-1: hsl(281, 89%, 26%);
+		--color-shadow-key-accent-1: hsl(285, 91%, 52%);
+
+		--color-bg-key-accent-2: hsl(176, 100%, 44%);
+		--color-shadow-key-accent-2: hsl(177, 92%, 70%);
+
+		--color-text-key-base: hsl(52, 100%, 62%);
+		--color-text-key-accent-1: hsl(0, 0%, 100%);
+		--color-text-key-accent-2: hsl(268, 47%, 21%);
+		--color-text-screen: hsl(52, 100%, 62%);
+		--color-text-sup-screen: hsl(281, 89%, 26%);
+	}
+}
+
+@layer components {
+	.btn {
+		@apply w-16 h-16 flex items-center justify-center rounded-lg pt-2 cursor-pointer transform active:scale-95;
+	}
+
+	.btn--base {
+		@apply bg-var-key-base shadow-key-base text-var-key-base text-[2rem];
+	}
+
+	.btn--accent-1 {
+		@apply bg-var-key-accent-1 shadow-key-accent-1 text-var-key-accent-1 text-lg uppercase;
+	}
+
+	.btn--accent-2 {
+		@apply bg-var-key-accent-2 shadow-key-accent-2 text-var-key-accent-2 text-lg uppercase;
+	}
+}
