@@ -1,5 +1,5 @@
 module.exports = {
-	mode: 'jit',
+	//mode: 'jit',
 	purge: ['./index.html', './style.css'],
 	darkMode: false, // or 'media' or 'class'
 	theme: {
@@ -34,7 +34,9 @@ module.exports = {
 		},
 	},
 	variants: {
-		extend: {},
+		extend: {
+			scale: ['active'],
+		},
 	},
 	plugins: [],
 };

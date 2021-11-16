@@ -76,7 +76,7 @@
 	}
 
 	.btn--base {
-		@apply bg-var-key-base shadow-key-base text-var-key-base text-[2rem];
+		@apply bg-var-key-base shadow-key-base text-var-key-base text-3xl;
 	}
 
 	.btn--accent-1 {

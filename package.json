@@ -5,7 +5,9 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo 'this is a test'",
-		"dev": "vite"
+		"dev": "vite",
+		"build": "vite build",
+		"serve": "vite preview --port 8080"
 	},
 	"repository": {
 		"type": "git",
