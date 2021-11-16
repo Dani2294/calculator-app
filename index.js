@@ -19,9 +19,6 @@ let supScreenValue = '';
 let operator = '';
 let result = '';
 
-/* On first load */
-reset();
-
 /* FUNCTIONS */
 function updateScreen() {
 	mainScreen.innerText = mainScreenValue;
