@@ -17,7 +17,7 @@ const equalButton = document.getElementById('equal');
 let mainScreenValue = '';
 let supScreenValue = '';
 let operator = '';
-let result = '';
+let result = null;
 
 /* FUNCTIONS */
 function updateScreen() {
@@ -43,7 +43,8 @@ function handleOperation(operation) {
 }
 
 function calc() {
-	const prevNum = parseFloat(supScreenValue);
+	const prevNum = result !== null ? result : parseFloat(supScreenValue);
+	console.log('prevNum: ', prevNum);
 	const currNum = parseFloat(mainScreenValue);
 	if (isNaN(prevNum) || isNaN(currNum)) return;
 
@@ -76,6 +77,7 @@ function reset() {
 	mainScreenValue = '';
 	supScreenValue = '';
 	operator = undefined;
+	result = null;
 }
 
 /* EVENTS */
